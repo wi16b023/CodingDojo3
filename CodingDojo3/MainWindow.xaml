@@ -1,0 +1,141 @@
+﻿<Window x:Class="CodingDojo3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodingDojo3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="700">
+    
+        <Grid Background="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Separator Grid.Column="1"/>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border BorderBrush="Red" BorderThickness="1" Margin="10,0,10,0">
+                    <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Image Height="50" Margin="10,0" Source="images/Warning-WF.png"/>
+                        <Label Content="Überlauf Grauwasser" Grid.Row="0" Grid.Column="0" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+                    </StackPanel>
+                </Border>
+
+                <Grid Grid.Column="0" Grid.Row="1" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="150*"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="150*"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Content="Aktionen" Foreground="White"/>
+
+                    <DataGrid Grid.Row="1"/>
+
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                        <Button Margin="5,5,5,5" Content="Hinzufügen" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="1"/>
+                        <Button Margin="5,5,5,5" Content="Löschen" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="1"/>
+                    </StackPanel>
+
+                    <Label Grid.Row="3" Content="Sensoren" Foreground="White"/>
+                    <DataGrid Grid.Row="4"/>
+                    <StackPanel Grid.Row="5" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                        <Button Margin="5,5,5,5" Content="Hinzufügen" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="1"/>
+                        <Button Margin="5,5,5,5" Content="Löschen" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="1"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1" Background="Black">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="40*"/>
+                </Grid.RowDefinitions>
+
+
+                <StackPanel Margin="10,0,0,0" Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="25" Grid.Column="0" Grid.Row="0"  Source="images/Cloud sun02-WF.png" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Label Grid.Column="0" Grid.Row="0" Foreground="White" Content="20°" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <StackPanel Margin="10,0,0,0" Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="25" Grid.Column="0" Grid.Row="1" Source="images/Wind.png" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Label Grid.Column="0" Grid.Row="1" Foreground="White" Content="12 km/h" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <Border Margin="2,0,2,0" Grid.Row="1" BorderThickness="0,0,0,1" BorderBrush="White"  HorizontalAlignment="Stretch"/>
+
+                <StackPanel Margin="10,0,0,0" Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="25" Grid.Column="0" Grid.Row="2" Source="images/Solar.png" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Label Grid.Column="0" Grid.Row="2" Foreground="White" Content="3.545 W" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <StackPanel Margin="10,0,0,0" Grid.Row="3" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="25" Grid.Column="0" Grid.Row="3" Source="images/Man-01.png" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Label Grid.Column="0" Grid.Row="3" Foreground="White" Content="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <StackPanel Margin="10,0,0,0" Grid.Row="4" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="25" Grid.Column="0" Grid.Row="4" Source="images/Lock-WF.png" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Label Grid.Column="0" Grid.Row="4" Foreground="White" Content="OK" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <Border Margin="2,0,2,0" Grid.Row="4" BorderThickness="0,0,0,1" BorderBrush="White"  HorizontalAlignment="Stretch"/>
+
+                <StackPanel Margin="10,0,0,0" Grid.Row="5" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="25" Grid.Column="0" Grid.Row="5"  Source="images/Message Mail-WF.png" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Label Grid.Column="0" Grid.Row="5" Foreground="White" Content="7" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <StackPanel Margin="10,0,0,0" Grid.Row="6" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Image Height="25" Grid.Column="0" Grid.Row="6" Source="images/Tasks.png" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Label Grid.Column="0" Grid.Row="6" Foreground="White" Content="4" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <Border Margin="2,0,2,0" Grid.Row="6" BorderThickness="0,0,0,1" BorderBrush="White"  HorizontalAlignment="Stretch"/>
+
+                <Button Margin="5,5,5,5" Content="Übersicht" Grid.Column="0" Grid.Row="7" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+                <Button Margin="5,5,5,5" Content="Räume" Grid.Column="0" Grid.Row="8" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+                <Button Margin="5,5,5,5" Content="Geräte" Grid.Column="0" Grid.Row="9" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+                <Button Margin="5,5,5,5" Content="Gebäude" Grid.Column="0" Grid.Row="10" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+                <Button Margin="5,5,5,5" Content="Sicherheit" Grid.Column="0" Grid.Row="11" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+                <Button Margin="5,5,5,5" Content="Multimedia" Grid.Column="0" Grid.Row="12" Foreground="White" Background="Black" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+                <Border Margin="2,0,2,0" Grid.Row="12" BorderThickness="0,0,0,1" BorderBrush="White"  HorizontalAlignment="Stretch"/>
+
+                <StackPanel Grid.Row="13" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <Image Grid.Row="13" Source="images/Bell New-WF.png" Height="25" />
+                    <Image Grid.Row="13" Source="images/Speaker Decrease - 01.png" Height="25" />
+                    <Label Content="4" Height="25" Foreground="White"/>
+                    <Image Grid.Row="13" Source="images/Speaker Increase - 02.png" Height="25" />
+                </StackPanel>
+                <Label Grid.Row="14" Content="12:34" Foreground="White" HorizontalAlignment="center" VerticalAlignment="Stretch"/>
+            </Grid>
+        </Grid>
+</Window>
