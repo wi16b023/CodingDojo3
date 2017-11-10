@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CodingDojo3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="700">
+        Title="MainWindow" Height="600" Width="700"
+        DataContext="{Binding Main, Mode=OneWay, Source={StaticResource Locator}}">
     
         <Grid Background="Black">
             <Grid.ColumnDefinitions>
@@ -70,7 +70,7 @@
                     <RowDefinition Height="50*"/>
                     <RowDefinition Height="50*"/>
                     <RowDefinition Height="50*"/>
-                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="50*"/>
                 </Grid.RowDefinitions>
 
 
@@ -135,7 +135,11 @@
                     <Label Content="4" Height="25" Foreground="White"/>
                     <Image Grid.Row="13" Source="images/Speaker Increase - 02.png" Height="25" />
                 </StackPanel>
-                <Label Grid.Row="14" Content="12:34" Foreground="White" HorizontalAlignment="center" VerticalAlignment="Stretch"/>
-            </Grid>
+           
+                <StackPanel Orientation="Vertical" Margin="0,0,0,10" Grid.Row="14" Grid.Column="1">
+                    <Label Content="{Binding CurrentTime}"  HorizontalAlignment="Center" FontSize="14" Foreground="White" Grid.Row="14" Grid.Column="1"/>
+                    <Label Content="{Binding CurrentDate}"  HorizontalAlignment="Center" FontSize="14" Foreground="White" Grid.Row="14" Grid.Column="1"/>
+                </StackPanel>         
+        </Grid>            
         </Grid>
 </Window>

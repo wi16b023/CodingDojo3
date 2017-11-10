@@ -7,16 +7,18 @@ namespace CodingDojo3.ViewModel
  
     public class MainViewModel : ViewModelBase
     {
+        private string currentTime = DateTime.Now.ToLocalTime().ToShortTimeString();
+        private string currentDate = DateTime.Now.ToLocalTime().ToShortDateString();
         private string CurrentDate
         {
-            get { return CurrentDate; }
-            set { CurrentDate = value; RaisePropertyChanged(); }
+            get { return "currentDate"; }
+            set { currentDate = value; RaisePropertyChanged(); }
         }
 
         private string CurrentTime
         {
-            get { return CurrentTime; }
-            set { CurrentTime = value; RaisePropertyChanged(); }
+            get { return currentTime; }
+            set { currentTime = value; RaisePropertyChanged(); }
         }
         public MainViewModel()
         {
@@ -24,7 +26,7 @@ namespace CodingDojo3.ViewModel
             //Timer erstellen
             DispatcherTimer timer = new DispatcherTimer();
             //Timer Interval festlegen
-            timer.Interval = new TimeSpan(0, 0, 40);
+            timer.Interval = new TimeSpan(0, 0, 1);
             //Timer mit derezitigen Datum und Uhrzeit belegen
             timer.Tick += UpdateTime;
 
